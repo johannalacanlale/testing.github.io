@@ -1,0 +1,994 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-size: cover;
+    font-family: Helvetica, Arial, sans-serif;
+        
+}
+
+h1, h2, h3, h4 {
+    margin: @;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    color: chocolate;
+    font-family: heibird;
+    font-size: 40px;
+}
+    
+#container {
+    width: 100%;
+    background-color: #efd6c3;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.header {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;  
+    flex-wrap: flex;
+}
+
+.header-home {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;  
+    flex-wrap: flex;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 60px;
+    top: 30px;
+}
+
+.logo img {
+    height: 100px;
+    width: 200px;
+    display: block; 
+}
+
+.cart {
+    height: 10px;
+    width; 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.cart img {
+    height: 35px;
+    width: 100px;
+    display: block;
+    padding-top: 10px;
+}
+
+.nav {
+    width: 100%;
+    background-color: antiquewhite;
+    line-height: 35px;
+    float: left;
+    text-align: center;
+}
+
+.nav a {
+    display: block;
+    color: #fffef0;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;   
+    font-family: Heibird;
+}
+
+.nav ul {
+    list-style: none;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+ 
+.nav ul li {
+    float: left;
+    list-style: none;
+    position: relative; 
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.nav ul li a {
+    display: block;
+    font-family: Heibird;
+    color: #518D65;
+    font-size: 16px;
+    padding-top: 40px;
+    text-decoration: none;
+}
+
+.nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: coral;
+    padding: 10px;
+    border-radius: 0px 0px 8px 8px;
+    
+}
+
+.nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: antiquewhite;
+    padding: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.nav ul li ul li {
+    padding: 8px 14px;
+    text-align: center;
+}
+
+.nav ul li ul li a {
+    color: #518D65;
+}
+
+.nav ul li ul li a:hover {
+    color: chocolate;
+}
+
+img {
+    padding: 10px 20px 5px 5px;
+    width: 70%;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.carousel {
+    position: relative;
+    box-shadow: 0px;
+    margin-top: 100px;
+}
+
+.carousel-inner {
+    position: static;
+    overflow: hidden;
+    width: 141.5%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.flex-container1 {
+    display: flex;
+    background-color: #efd6c3;
+    clear: both;
+    height: 300px;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.column1 img {
+    height: 120px;
+    width: 220px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.column2 img {
+    height: 150px;
+    width: 420px;
+    margin-top: 23px;
+}
+
+.column1 {
+    margin-left: 190px;
+    margin-top: 55px;
+    text-align: left;
+}
+
+.column2 {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    padding: 30px 100px 10px 393px;
+}
+
+.column1 > div > a {
+    text-align: center;
+    font-family: Heibird;
+    color: chocolate;
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+}
+
+.column2 > a > h1 {
+    text-align: center;
+    font-family: Heibird;
+    color: chocolate;
+    margin-top: 4px;
+    margin-bottom: -16px;
+    margin-right: 20px;
+    text-decoration: inherit;
+}
+
+
+.about_header {
+    display: block;
+    background-color: antiquewhite;
+    height: 130%;
+    line-height: 80%;
+    text-align: center;
+}
+
+.about_header > h1 {
+    font-family: Heibird;
+    font-size: 40px;
+    line-height: 80px;
+    color: chocolate;
+}
+.about img {
+    width: 300px;
+    height: 180px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.about > div > h2 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-right: 25px;
+}
+
+.about {
+    display: flex;
+    background-color: #efd6c3;
+    clear: both;
+    height: 180%;
+    margin: 0px;
+    padding-top: 30px;
+    padding-bottom: 95px;
+}
+
+.about_header2 {
+    display: flex;
+    padding-top: 0px;
+    background-color:antiquewhite;
+    height: 50%;
+    text-align: center;
+}
+
+.about_header2 > h1 {
+    font-family: Heibird;
+    font-size: 40px;
+    line-height: 70px;
+    color: chocolate;
+    margin-left: 615px;
+}
+
+.aboutteam img {
+    width: 300px;
+    height: 180px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.aboutteam > div > h1 {
+    color: #185431;
+    font-family: Heibird;
+    font-size: 32px;
+    margin-left: 25px;
+    text-align: right;
+}
+.aboutteam > div > h2 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.aboutteam {
+    display: flex;
+    background-color: #efd6c3;
+    clear: both;
+    height: 150%;
+    padding-top: 40px;
+}
+
+.aboutteam2 img {
+    width: 300px;
+    height: 180px;
+    margin-left: 25px;
+}
+
+.aboutteam2 > div > h1 {
+    color: #185431;
+    font-family: Heibird;
+    font-size: 32px;
+    margin-right: 25px;
+}
+.aboutteam2 > div > h2 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-right: 25px;
+}
+
+.aboutteam2 {
+    display: flex;
+    background-color: #efd6c3;
+    clear: both;
+    height: 150%;
+}
+
+
+.column3 > h1 {
+    font-size: 45px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: Heibird;
+    color: chocolate;
+}
+
+.column3 > div > a {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Heibird;
+    color: darkolivegreen;
+}
+
+
+.column3 img {
+    width: 650px;
+    height: 400px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.flex-container2 > div {
+    background-color: aliceblue;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    height: 650px;
+}
+
+.flex-container3 > div {
+    background-color: aliceblue;
+    color: lightsalmon;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    float: left;
+    font-size: 22px;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    margin-top: -50px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products > div {
+    text-align: center;
+    line-height: 5px;
+    margin-top: 5px;
+    justify-content: center;
+    font-family: heibird;
+    font-size: 16px;
+    color: darkolivegreen;
+}
+
+.products > div > a > button {
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: antiquewhite;
+    font-family: Heibird;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: chocolate;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.products > div > a > button:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+.grapefruit {
+    display: flex;
+    background-color: #efd6c3;
+    height: 300px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.grapefruit img {
+    width: 600px;
+    height: 600px;
+    margin-left: 25px;
+    display: flex;
+    margin-top: -100px;
+}
+
+.grapefruit-text {
+    margin-top: 60px;
+    margin-right: 50px;
+}
+
+.grapefruit-text div h25 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 40px;
+    margin-right: 25px;
+    margin-top: 400px;
+}
+
+
+.grapefruit-text div p {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-right: 25px;
+    margin-bottom: -130px;
+}
+
+.grapefruit-text button {
+    margin-top: 200px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: antiquewhite;
+    font-family: Heibird;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: chocolate;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.grapefruit-text button:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+.cherry {
+    display: flex;
+    background-color: #efd6c3;
+    height: 300px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.cherry img {
+    width: 600px;
+    height: 600px;
+    margin-left: 25px;
+    display: flex;
+    margin-top: -100px;
+}
+
+.cherry-text {
+    margin-top: 60px;
+    margin-right: 50px;
+}
+
+.cherry-text div h25 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 40px;
+    margin-right: 25px;
+    margin-top: 400px;
+}
+
+
+.cherry-text div p {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-right: 25px;
+    margin-bottom: -130px;
+}
+
+.cherry-text button {
+    margin-top: 200px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: antiquewhite;
+    font-family: Heibird;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: chocolate;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.cherry-text button:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+.apple {
+    display: flex;
+    background-color: #efd6c3;
+    height: 300px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.apple img {
+    width: 600px;
+    height: 600px;
+    margin-left: 25px;
+    display: flex;
+    margin-top: -100px;
+}
+
+.apple-text {
+    margin-top: 60px;
+    margin-right: 50px;
+}
+
+.apple-text div h25 {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 40px;
+    margin-right: 25px;
+    margin-top: 400px;
+}
+
+
+.apple-text div p {
+    color: darkolivegreen;
+    font-family: Heibird;
+    font-size: 16px;
+    margin-right: 25px;
+    margin-bottom: -130px;
+}
+
+.apple-text button {
+    margin-top: 200px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: antiquewhite;
+    font-family: Heibird;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: chocolate;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.apple-text button:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+.cart-page {
+    margin: 80px 80px 80px 80px;
+    font-family: Heibird;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: flex;
+}
+
+.cart-info div{
+    margin-top: 130px;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: darkolivegreen;
+    background-color: antiquewhite;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color:darkolivegreen;
+    font-size: 12px; 
+}
+
+td p{
+    color: chocolate;
+}
+
+td img{
+    width: 400px;
+    height: 400px; 
+    margin-right: 10px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    border-top: 3px solid darkolivegreen;
+    width: 100%;
+    max-width: 280px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+th:last-child{
+    text-align: right;
+}
+
+.blog-header {
+    font-family: Heibird;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 150px;
+    color: darkgreen;
+    text-align: center;
+    font-size: 18px;
+}
+
+h8 {
+    font-size: 50px;
+}
+
+.blog-header p{
+    text-decoration: underline;
+}
+
+.blog-img > img{
+    width: 600px;
+    height: 440px;
+    margin-left: 405px;
+}
+
+.blog-text {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Heibird;
+}
+
+h9 {
+    font-size: 45px;
+    color: chocolate;
+}
+
+.blog-text p{
+    font-size: 16px;
+    color: darkolivegreen;
+}
+
+.blog-recos{
+    text-align: center;
+}
+
+h10{
+    font-family: Heibird;
+    font-size: 13px;
+    color:chocolate;
+}
+
+.blog-recos textarea{
+    width: 80%;
+    margin-top: 20px;
+    background: antiquewhite;
+}
+
+.blog-recos button{
+    background-color: darkolivegreen;
+    width: 80px;
+    border: none;
+    outline: none;
+    color: white;
+    height: 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.contact {
+    width: 80%;
+    margin: 50px auto;
+    font-family: Heibird;
+    color: darkgreen;
+}
+
+.contact-box {
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: floralwhite;
+    color: darkolivegreen;
+}
+
+h5 {
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin-bottom: 40px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid antiquewhite;
+    padding-bottom: 5px;
+    font-family: Heibird;
+}
+
+button {
+    background-color: darkolivegreen;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.contact-left h5 {
+    font-size: 16px;
+    color: chocolate;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
+
+.map {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h6 {
+    color: darkgreen;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: brown;
+}
+
+iframe {
+    width: 80%;
+    height: 300px;
+    filter: invert(100%);
+}
+
+.footer {
+    background-color: #9cba9c;
+    color: white;
+    margin-top: 100px;
+    width: auto;
+    padding: 100px 15%;
+    display: flex;
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+
+.footer div h7{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a{
+    display:block;
+    text-decoration: none;
+    color:floralwhite;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.col-2 form textarea{
+    width: 400px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+}
+
+.col-2 form button{
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: -45px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
